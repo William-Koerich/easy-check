@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import { useState } from "react";
 import {
   KeyboardAvoidingView,
@@ -16,7 +17,7 @@ export default function LoginScreen() {
   const [passwordFocused, setPasswordFocused] = useState(false);
 
   function handleLogin() {
-    // TODO: implementar autenticação
+    router.push("/(app)/home");
   }
 
   return (
@@ -99,10 +100,10 @@ export default function LoginScreen() {
 
           {/* Botão entrar */}
           <Pressable
-            className="items-center rounded-xl bg-primary-600 py-4 active:bg-primary-700"
+            className="items-center rounded-2xl bg-primary-600 py-4 active:bg-primary-700"
             onPress={handleLogin}
           >
-            <Text className="text-base font-semibold text-white">Entrar</Text>
+            <Text className="text-base font-bold text-white">Entrar</Text>
           </Pressable>
 
           {/* Rodapé */}
